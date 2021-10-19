@@ -32,8 +32,8 @@ gulp.task('images', gulp.parallel(function(){
   // isn't installed
   return gulp.src('*', {read:false})
     .pipe(shell([
-      'TexturePacker --version || echo ERROR: TexturePacker not found, install TexturePacker',
-      'TexturePacker --disable-rotation --data dist/sprites.json --format json --sheet dist/sprites.png src/assets/images'
+      '/Applications/TexturePacker.app/Contents/MacOS/TexturePacker --version || echo ERROR: TexturePacker not found, install TexturePacker',
+      '/Applications/TexturePacker.app/Contents/MacOS/TexturePacker --disable-rotation --data dist/sprites.json --format json --sheet dist/sprites.png src/assets/images'
     ]))
     .pipe(connect.reload());
 }));
