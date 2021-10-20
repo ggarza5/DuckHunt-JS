@@ -264,9 +264,10 @@ class Game {
     this.addMuteLink();
     this.addFullscreenLink();
     this.bindEvents();
+    this.gameStatus = 'Press (p) to start';
     // this.startLevel();
-    // this.animate();
-    this.pause()
+    this.animate();
+    // this.pause()
     // this.stage.pause()
   }
 
