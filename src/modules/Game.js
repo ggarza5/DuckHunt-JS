@@ -9,7 +9,7 @@ import utils from '../libs/utils';
 const BLUE_SKY_COLOR = 0x64b0ff;
 const PINK_SKY_COLOR = 0xfbb4d4;
 const BLACK_SKY_COLOR = 0x040404;
-const TWILIGHT_SKY_COLOR = 0x4e518b;
+const NIGHT_SKY_COLOR = 0x2a2a35;
 const LIGHT_BLACK_SKY_COLOR = 0x212121;
 const SUCCESS_RATIO = 0.6;
 const BOTTOM_LINK_STYLE = {
@@ -30,7 +30,7 @@ class Game {
     this.spritesheet = opts.spritesheet;
     this.loader = loader;
     this.renderer =  autoDetectRenderer(window.innerWidth, window.innerHeight, {
-      backgroundColor: TWILIGHT_SKY_COLOR
+      backgroundColor: NIGHT_SKY_COLOR
     });
     this.levelIndex = 0;
     this.maxScore = 0;
@@ -38,6 +38,8 @@ class Game {
     this.muted = false;
     this.paused = false;
     this.activeSounds = [];
+
+    this.playerHasStartedGame = false;
 
     this.waveEnding = false;
     this.quackingSoundId = null;
@@ -263,8 +265,8 @@ class Game {
     this.addFullscreenLink();
     this.bindEvents();
     // this.startLevel();
-    this.animate();
-    // this.pause()
+    // this.animate();
+    this.pause()
     // this.stage.pause()
   }
 
@@ -367,6 +369,12 @@ class Game {
     // SetTimeout, woof. Thing is here we need to leave enough animation frames for the HUD status to be updated
     // before pausing all rendering, otherwise the text update we need above won't be shown to the user.
     setTimeout(() => {
+      if (!this.playerHasStartedGame) {
+        this.playerHasStartedGame = !this.playerHasStartedGame;
+        this.startLevel()
+        this.animate()
+        return
+      }
       this.paused = !this.paused;
       if (this.paused) {
         this.pauseStartTime = Date.now();

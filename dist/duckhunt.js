@@ -37239,7 +37239,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var BLUE_SKY_COLOR = 0x64b0ff;
 var PINK_SKY_COLOR = 0xfbb4d4;
 var BLACK_SKY_COLOR = 0x040404;
-var TWILIGHT_SKY_COLOR = 0x4e518b;
+var NIGHT_SKY_COLOR = 0x2a2a35;
 var LIGHT_BLACK_SKY_COLOR = 0x212121;
 var SUCCESS_RATIO = 0.6;
 var BOTTOM_LINK_STYLE = {
@@ -37262,7 +37262,7 @@ var Game = function () {
     this.spritesheet = opts.spritesheet;
     this.loader = _pixi.loader;
     this.renderer = (0, _pixi.autoDetectRenderer)(window.innerWidth, window.innerHeight, {
-      backgroundColor: TWILIGHT_SKY_COLOR
+      backgroundColor: NIGHT_SKY_COLOR
     });
     this.levelIndex = 0;
     this.maxScore = 0;
@@ -37270,6 +37270,8 @@ var Game = function () {
     this.muted = false;
     this.paused = false;
     this.activeSounds = [];
+
+    this.playerHasStartedGame = false;
 
     this.waveEnding = false;
     this.quackingSoundId = null;
@@ -37298,8 +37300,8 @@ var Game = function () {
       this.addFullscreenLink();
       this.bindEvents();
       // this.startLevel();
-      this.animate();
-      // this.pause()
+      // this.animate();
+      this.pause();
       // this.stage.pause()
     }
   }, {
@@ -37414,6 +37416,12 @@ var Game = function () {
       // SetTimeout, woof. Thing is here we need to leave enough animation frames for the HUD status to be updated
       // before pausing all rendering, otherwise the text update we need above won't be shown to the user.
       setTimeout(function () {
+        if (!_this2.playerHasStartedGame) {
+          _this2.playerHasStartedGame = !_this2.playerHasStartedGame;
+          _this2.startLevel();
+          _this2.animate();
+          return;
+        }
         _this2.paused = !_this2.paused;
         if (_this2.paused) {
           _this2.pauseStartTime = Date.now();
