@@ -37238,6 +37238,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var BLUE_SKY_COLOR = 0x64b0ff;
 var PINK_SKY_COLOR = 0xfbb4d4;
+var BLACK_SKY_COLOR = 0x040404;
+var LIGHT_BLACK_SKY_COLOR = 0x212121;
 var SUCCESS_RATIO = 0.6;
 var BOTTOM_LINK_STYLE = {
   fontFamily: 'Arial',
@@ -37259,13 +37261,13 @@ var Game = function () {
     this.spritesheet = opts.spritesheet;
     this.loader = _pixi.loader;
     this.renderer = (0, _pixi.autoDetectRenderer)(window.innerWidth, window.innerHeight, {
-      backgroundColor: BLUE_SKY_COLOR
+      backgroundColor: BLACK_SKY_COLOR
     });
     this.levelIndex = 0;
     this.maxScore = 0;
     this.timePaused = 0;
-    this.muted = true;
-    this.paused = true;
+    this.muted = false;
+    this.paused = false;
     this.activeSounds = [];
 
     this.waveEnding = false;
@@ -37490,7 +37492,7 @@ var Game = function () {
       _Sound2.default.stop(this.quackingSoundId);
       if (this.stage.ducksAlive()) {
         this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
-        this.renderer.backgroundColor = PINK_SKY_COLOR;
+        this.renderer.backgroundColor = LIGHT_BLACK_SKY_COLOR;
         this.stage.flyAway().then(this.goToNextWave.bind(this));
       } else {
         this.stage.cleanUpDucks();
@@ -37500,7 +37502,7 @@ var Game = function () {
   }, {
     key: 'goToNextWave',
     value: function goToNextWave() {
-      this.renderer.backgroundColor = BLUE_SKY_COLOR;
+      this.renderer.backgroundColor = BLACK_SKY_COLOR;
       if (this.level.waves === this.wave) {
         this.endLevel();
       } else {
