@@ -1,3 +1,3 @@
 #!/bin/bash
 npm run images
-git add-commit-push changes
+git add-commit-push 'Images changed'

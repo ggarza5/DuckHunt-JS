@@ -37296,6 +37296,7 @@ var Game = function () {
       this.bindEvents();
       this.startLevel();
       this.animate();
+      this.pause();
     }
   }, {
     key: 'addFullscreenLink',

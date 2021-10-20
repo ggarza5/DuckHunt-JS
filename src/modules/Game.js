@@ -261,7 +261,7 @@ class Game {
     this.bindEvents();
     this.startLevel();
     this.animate();
-
+    this.pause()
   }
 
   addFullscreenLink() {
