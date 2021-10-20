@@ -262,6 +262,7 @@ class Game {
     this.startLevel();
     this.animate();
     this.pause()
+    this.stage.pause()
   }
 
   addFullscreenLink() {
