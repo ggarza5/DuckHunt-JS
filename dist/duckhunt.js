@@ -37299,7 +37299,7 @@ var Game = function () {
       this.addMuteLink();
       this.addFullscreenLink();
       this.bindEvents();
-      this.gameStatus = 'Press (p) to start';
+      this.gameStatus = 'Click this window, then press (p) to start';
       // this.startLevel();
       this.animate();
       // this.pause()
