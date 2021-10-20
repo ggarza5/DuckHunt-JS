@@ -33,7 +33,7 @@ class Game {
     this.maxScore = 0;
     this.timePaused = 0;
     this.muted = false;
-    this.paused = false;
+    this.paused = true;
     this.activeSounds = [];
 
     this.waveEnding = false;
