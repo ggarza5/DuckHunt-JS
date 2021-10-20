@@ -223,10 +223,10 @@ class Stage extends Container {
    */
   shotsFired(clickPoint, radius) {
     // flash the screen
-    this.flashScreen.visible = true;
-    _delay(() => {
-      this.flashScreen.visible = false;
-    }, FLASH_MS);
+    // this.flashScreen.visible = true;
+    // _delay(() => {
+    //   this.flashScreen.visible = false;
+    // }, FLASH_MS);
 
     let ducksShot = 0;
     for (let i = 0; i < this.ducks.length; i++) {

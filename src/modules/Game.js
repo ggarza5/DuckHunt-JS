@@ -447,7 +447,7 @@ class Game {
     sound.stop(this.quackingSoundId);
     if (this.stage.ducksAlive()) {
       this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
-      this.renderer.backgroundColor = LIGHT_BLACK_SKY_COLOR;
+      this.renderer.backgroundColor = NIGHT_SKY_COLOR;
       this.stage.flyAway().then(this.goToNextWave.bind(this));
     } else {
       this.stage.cleanUpDucks();
@@ -456,7 +456,7 @@ class Game {
   }
 
   goToNextWave() {
-    this.renderer.backgroundColor = BLACK_SKY_COLOR;
+    this.renderer.backgroundColor = NIGHT_SKY_COLOR;
     if (this.level.waves === this.wave) {
       this.endLevel();
     } else {

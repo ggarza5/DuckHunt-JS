@@ -37502,7 +37502,7 @@ var Game = function () {
       _Sound2.default.stop(this.quackingSoundId);
       if (this.stage.ducksAlive()) {
         this.ducksMissed += this.level.ducks - this.ducksShotThisWave;
-        this.renderer.backgroundColor = LIGHT_BLACK_SKY_COLOR;
+        this.renderer.backgroundColor = NIGHT_SKY_COLOR;
         this.stage.flyAway().then(this.goToNextWave.bind(this));
       } else {
         this.stage.cleanUpDucks();
@@ -37512,7 +37512,7 @@ var Game = function () {
   }, {
     key: 'goToNextWave',
     value: function goToNextWave() {
-      this.renderer.backgroundColor = BLACK_SKY_COLOR;
+      this.renderer.backgroundColor = NIGHT_SKY_COLOR;
       if (this.level.waves === this.wave) {
         this.endLevel();
       } else {
@@ -38947,10 +38947,10 @@ var Stage = function (_Container) {
       var _this3 = this;
 
       // flash the screen
-      this.flashScreen.visible = true;
-      (0, _function.delay)(function () {
-        _this3.flashScreen.visible = false;
-      }, FLASH_MS);
+      // this.flashScreen.visible = true;
+      // _delay(() => {
+      //   this.flashScreen.visible = false;
+      // }, FLASH_MS);
 
       var ducksShot = 0;
       for (var i = 0; i < this.ducks.length; i++) {
