@@ -37294,10 +37294,10 @@ var Game = function () {
       this.addMuteLink();
       this.addFullscreenLink();
       this.bindEvents();
-      this.startLevel();
+      // this.startLevel();
       this.animate();
-      this.pause();
-      this.stage.pause();
+      // this.pause()
+      // this.stage.pause()
     }
   }, {
     key: 'addFullscreenLink',
