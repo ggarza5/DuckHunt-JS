@@ -9,6 +9,7 @@ import utils from '../libs/utils';
 const BLUE_SKY_COLOR = 0x64b0ff;
 const PINK_SKY_COLOR = 0xfbb4d4;
 const BLACK_SKY_COLOR = 0x040404;
+const TWILIGHT_SKY_COLOR = 0x4e518b;
 const LIGHT_BLACK_SKY_COLOR = 0x212121;
 const SUCCESS_RATIO = 0.6;
 const BOTTOM_LINK_STYLE = {
@@ -29,7 +30,7 @@ class Game {
     this.spritesheet = opts.spritesheet;
     this.loader = loader;
     this.renderer =  autoDetectRenderer(window.innerWidth, window.innerHeight, {
-      backgroundColor: BLACK_SKY_COLOR
+      backgroundColor: TWILIGHT_SKY_COLOR
     });
     this.levelIndex = 0;
     this.maxScore = 0;

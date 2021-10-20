@@ -37239,6 +37239,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var BLUE_SKY_COLOR = 0x64b0ff;
 var PINK_SKY_COLOR = 0xfbb4d4;
 var BLACK_SKY_COLOR = 0x040404;
+var TWILIGHT_SKY_COLOR = 0x4e518b;
 var LIGHT_BLACK_SKY_COLOR = 0x212121;
 var SUCCESS_RATIO = 0.6;
 var BOTTOM_LINK_STYLE = {
@@ -37261,7 +37262,7 @@ var Game = function () {
     this.spritesheet = opts.spritesheet;
     this.loader = _pixi.loader;
     this.renderer = (0, _pixi.autoDetectRenderer)(window.innerWidth, window.innerHeight, {
-      backgroundColor: BLACK_SKY_COLOR
+      backgroundColor: TWILIGHT_SKY_COLOR
     });
     this.levelIndex = 0;
     this.maxScore = 0;
