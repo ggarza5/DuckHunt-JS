@@ -14,7 +14,7 @@ const LIGHT_BLACK_SKY_COLOR = 0x212121;
 const SUCCESS_RATIO = 0.6;
 const BOTTOM_LINK_STYLE = {
   fontFamily: 'Arial',
-  fontSize: '16px',
+  fontSize: '18px',
   align: 'left',
   fill: 'white'
 };
@@ -192,7 +192,7 @@ class Game {
         this.stage.hud.createTextBox('waveStatus', {
           style: {
             fontFamily: 'Arial',
-            fontSize: '14px',
+            fontSize: '18px',
             align: 'center',
             fill: 'white'
           },
