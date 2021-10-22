@@ -14,7 +14,7 @@ const LIGHT_BLACK_SKY_COLOR = 0x212121;
 const SUCCESS_RATIO = 0.6;
 const BOTTOM_LINK_STYLE = {
   fontFamily: 'Arial',
-  fontSize: '15px',
+  fontSize: '16px',
   align: 'left',
   fill: 'white'
 };
@@ -234,7 +234,7 @@ class Game {
           style: {
             fontFamily: 'Arial',
             fontSize: '40px',
-            align: 'left',
+            align: 'center',
             fill: 'white'
           },
           location: Stage.gameStatusBoxLocation()
