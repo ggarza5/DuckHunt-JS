@@ -431,7 +431,7 @@ class Game {
   }
 
   startWave() {
-    this.quackingSoundId = sound.play('quacking');
+    this.quackingSoundId = sound.play('swarm');
     this.wave += 1;
     this.waveStartTime = Date.now();
     this.bullets = this.level.bullets;

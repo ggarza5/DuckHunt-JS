@@ -37485,7 +37485,7 @@ var Game = function () {
   }, {
     key: 'startWave',
     value: function startWave() {
-      this.quackingSoundId = _Sound2.default.play('quacking');
+      this.quackingSoundId = _Sound2.default.play('swarm');
       this.wave += 1;
       this.waveStartTime = Date.now();
       this.bullets = this.level.bullets;
