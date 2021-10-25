@@ -37244,7 +37244,7 @@ var LIGHT_BLACK_SKY_COLOR = 0x212121;
 var SUCCESS_RATIO = 0.6;
 var BOTTOM_LINK_STYLE = {
   fontFamily: 'Arial',
-  fontSize: '15px',
+  fontSize: '18px',
   align: 'left',
   fill: 'white'
 };
@@ -37299,7 +37299,7 @@ var Game = function () {
       this.addMuteLink();
       this.addFullscreenLink();
       this.bindEvents();
-      this.gameStatus = 'Click this window, then press (p) to start. On mobile, just click pause';
+      this.gameStatus = 'Click this window, then press (p) to start.\nOn mobile, click pause';
       // this.startLevel();
       this.animate();
       // this.pause()
@@ -37846,7 +37846,7 @@ var Game = function () {
           this.stage.hud.createTextBox('waveStatus', {
             style: {
               fontFamily: 'Arial',
-              fontSize: '14px',
+              fontSize: '18px',
               align: 'center',
               fill: 'white'
             },
@@ -37892,7 +37892,7 @@ var Game = function () {
             style: {
               fontFamily: 'Arial',
               fontSize: '40px',
-              align: 'left',
+              align: 'center',
               fill: 'white'
             },
             location: _Stage2.default.gameStatusBoxLocation()
@@ -48892,7 +48892,7 @@ const TweenMaxBase = TweenMax;
 /* 324 */
 /***/ (function(module, exports) {
 
-module.exports = {"src":["audio.ogg","audio.mp3"],"sprite":{"barkDucks":[0,2403.265306122449],"champ":[4000,9639.183673469388],"gunSound":[15000,504.01360544217687],"laugh":[17000,1368.0045351473923],"loserSound":[20000,3631.0204081632664],"ohYeah":[25000,1071.020408163264],"quacking":[28000,6817.959183673466,true],"quak":[36000,783.6734693877575],"sniff":[38000,1985.306122448982,true],"thud":[41000,548.571428571428]}}
+module.exports = {"src":["audio.ogg","audio.mp3"],"sprite":{"barkDucks":[0,2403.265306122449],"champ":[4000,9639.183673469388],"chirp":[15000,507.0068027210883],"gunSound":[17000,504.0136054421751],"laugh":[19000,1368.0045351473923],"loserSound":[22000,3631.0204081632664],"ohYeah":[27000,1071.020408163264],"quacking":[30000,6817.959183673466],"quak":[38000,783.6734693877575],"sniff":[40000,1985.306122448982,true],"swarm":[43000,7007.619047619045],"thud":[52000,548.571428571428],"woofbats":[54000,1990.1814058956902]}}
 
 /***/ }),
 /* 325 */

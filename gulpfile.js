@@ -13,7 +13,7 @@ gulp.task('audio', gulp.parallel(function(cb) {
     path: './',
     format: 'howler2',
     'export': 'ogg,mp3',
-    loop: ['quacking', 'sniff']
+    loop: ['chirping', 'sniff']
   };
 
   return audiosprite(files, opts, function(err, obj) {
