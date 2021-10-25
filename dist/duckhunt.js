@@ -38151,7 +38151,7 @@ var Dog = function (_Character) {
       }, opts);
 
       this.timeline.add(function () {
-        _Sound2.default.play('barkDucks');
+        _Sound2.default.play('woofbats');
         _this4.state = 'find';
         options.onStart();
       });

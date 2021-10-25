@@ -143,7 +143,7 @@ class Dog extends Character {
     }, opts);
 
     this.timeline.add(() => {
-      sound.play('barkDucks');
+      sound.play('woofbats');
       this.state = 'find';
       options.onStart();
     });
