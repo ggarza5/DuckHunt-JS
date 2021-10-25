@@ -38470,7 +38470,7 @@ var Duck = function (_Character) {
       this.stopAndClearTimeline();
       this.timeline.add(function () {
         _this3.state = 'shot';
-        _Sound2.default.play('quak', _util.noop);
+        _Sound2.default.play('chirp', _util.noop);
       });
 
       this.timeline.to(this.position, DEATH_ANIMATION_SECONDS, {

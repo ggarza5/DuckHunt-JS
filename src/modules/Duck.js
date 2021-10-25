@@ -151,7 +151,7 @@ class Duck extends Character {
     this.stopAndClearTimeline();
     this.timeline.add(() => {
       this.state = 'shot';
-      sound.play('quak', _noop);
+      sound.play('chirp', _noop);
     });
 
     this.timeline.to(this.position, DEATH_ANIMATION_SECONDS, {
