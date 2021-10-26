@@ -37355,7 +37355,7 @@ var Game = function () {
           y: 1
         }
       });
-      this.stage.hud.levelCreatorLink = 'level creator (c)';
+      this.stage.hud.levelCreatorLink = '   level creator (c)';
     }
   }, {
     key: 'bindEvents',
@@ -38767,9 +38767,9 @@ var HUD_LOCATIONS = {
   SCORE: new _pixi.Point(MAX_X - 10, 10),
   WAVE_STATUS: new _pixi.Point(MAX_X - 11, MAX_Y - 30),
   LEVEL_CREATOR_LINK: new _pixi.Point(MAX_X - 11, MAX_Y - 10),
-  FULL_SCREEN_LINK: new _pixi.Point(MAX_X - 130, MAX_Y - 10),
-  PAUSE_LINK: new _pixi.Point(MAX_X - 318, MAX_Y - 10),
-  MUTE_LINK: new _pixi.Point(MAX_X - 236, MAX_Y - 10),
+  FULL_SCREEN_LINK: new _pixi.Point(MAX_X - 138, MAX_Y - 10),
+  PAUSE_LINK: new _pixi.Point(MAX_X - 326, MAX_Y - 10),
+  MUTE_LINK: new _pixi.Point(MAX_X - 244, MAX_Y - 10),
   GAME_STATUS: new _pixi.Point(MAX_X / 2, MAX_Y * 0.45),
   REPLAY_BUTTON: new _pixi.Point(MAX_X / 2, MAX_Y * 0.56),
   BULLET_STATUS: new _pixi.Point(10, 10),

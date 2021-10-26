@@ -1,3 +1,4 @@
 node_modules
 .terraform*images.zip
 src/assets/images.zip
+.DS_Store

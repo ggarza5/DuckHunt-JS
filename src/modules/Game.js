@@ -315,7 +315,7 @@ class Game {
         y: 1
       }
     });
-    this.stage.hud.levelCreatorLink = 'level creator (c)';
+    this.stage.hud.levelCreatorLink = '   level creator (c)';
   }
 
   bindEvents() {
