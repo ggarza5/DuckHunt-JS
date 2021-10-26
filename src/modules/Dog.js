@@ -78,7 +78,8 @@ class Dog extends Character {
       y: options.endPoint.y,
       ease: 'Linear.easeNone',
       onStart: () => {
-        this.visible = true;
+        // this.visible = true;
+        this.visible = false;
         this.parent.setChildIndex(this, this.parent.children.length - 1);
         this.state = 'sniff';
         this.sniffSoundId = sound.play('sniff');
@@ -123,6 +124,7 @@ class Dog extends Character {
       onStart: () => {
         this.visible = true;
         options.onStart.call(this);
+        // this.visible = false;
       },
       onComplete: options.onComplete
     }));

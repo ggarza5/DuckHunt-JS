@@ -38076,7 +38076,7 @@ var Dog = function (_Character) {
         y: options.endPoint.y,
         ease: 'Linear.easeNone',
         onStart: function onStart() {
-          _this2.visible = true;
+          // this.visible = true;
           _this2.parent.setChildIndex(_this2, _this2.parent.children.length - 1);
           _this2.state = 'sniff';
           _this2.sniffSoundId = _Sound2.default.play('sniff');
@@ -38124,7 +38124,7 @@ var Dog = function (_Character) {
         repeatDelay: 0.5,
         ease: 'Linear.easeNone',
         onStart: function onStart() {
-          _this3.visible = true;
+          // this.visible = true;
           options.onStart.call(_this3);
         },
         onComplete: options.onComplete
